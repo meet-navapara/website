@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const fullWebsiteInitialState = {
   // Website Details
-  websiteUrl: 'example.com',
-  language: { value: 'en-us', label: 'English US' },
-  country: { value: 'us', label: 'United States' },
+  websiteUrl: 'www.example.com',
+  language: { value: 'en-us', label: 'English US', flag: 'https://flagcdn.com/us.svg' },
+  country: { value: 'US', label: 'United States', flag: 'https://flagcdn.com/us.svg' },
   categories: { 'Computer & Electronics': true, Entertainment: true },
   description: 'This is a sample description for a website.',
   isOwner: true,
@@ -18,7 +18,7 @@ const fullWebsiteInitialState = {
   homepageLinkGuidelines: '',
   
   // Article Specs
-  writingIncluded: 'yes',
+  writingIncluded: 'yes', 
   numberOfWords: 'unlimited',
   minWords: '',
   maxWords: '',
@@ -33,7 +33,6 @@ const fullWebsiteInitialState = {
 const initialState = {
   list: [
     { id: 1, ...fullWebsiteInitialState, flag: 'https://flagcdn.com/us.svg' },
-    { id: 2, ...fullWebsiteInitialState, websiteUrl: 'example.de', country: { value: 'de', label: 'Germany' }, language: { value: 'de', label: 'German' }, flag: 'https://flagcdn.com/de.svg' },
   ],
 };
 
