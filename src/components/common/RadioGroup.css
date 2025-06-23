@@ -14,14 +14,16 @@
 
 .radiogroup-options-wrapper {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .radio-wrapper {
   position: relative;
   display: flex;
-  align-items: center;
-  margin-right: 1.5rem; /* Space between options */
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  margin-right: 0;
 }
 
 .radio-label {

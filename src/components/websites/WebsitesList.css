@@ -3,22 +3,21 @@
 }
 
 .title-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+ 
 }
 
 .page-title {
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .add-website-btn {
   background-color: #613ded !important;
   border-color: #613ded !important;
   font-weight: 500;
-  padding: 0.6rem 1.2rem;
+  padding: 0.5rem 4.2rem;
   border-radius: 8px;
 }
 

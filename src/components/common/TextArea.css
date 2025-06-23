@@ -24,4 +24,10 @@
 
 .form-control-custom-textarea.is-invalid:focus {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+}
+
+.form-control-custom-textarea::placeholder {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  opacity: 1;
 } 

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useWatch } from 'react-hook-form';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import { getArticleSpecificationOptions } from '../../services/apiService';
-
 import RadioGroup from '../../components/common/RadioGroup';
 import TextArea from '../../components/common/TextArea';
 import MinMaxInput from '../../components/common/MinMaxInput';
+import './ArticleSpecificationForm.css';
 
 const ArticleSpecificationForm = ({ register, control, errors }) => {
   const [options, setOptions] = useState({});
@@ -18,11 +18,11 @@ const ArticleSpecificationForm = ({ register, control, errors }) => {
   const watchAdvertiserLinks = useWatch({ control, name: 'advertiserLinks' });
 
   return (
-    <Container className="form-container mt-4">
-      <h2 className="mb-4">Article specification</h2>
+    <div className="article-spec-card">
+      <h2 className="article-spec-title">Article specification</h2>
       <Row>
         {/* Left Column */}
-        <Col md={6}>
+        <Col md={6} className="article-spec-col">
           {options.writingIncluded && (
             <RadioGroup
               label="Is writing of an article included in the offer?"
@@ -33,7 +33,6 @@ const ArticleSpecificationForm = ({ register, control, errors }) => {
               error={errors.writingIncluded}
             />
           )}
-          
           {options.numberOfWords && (
             <RadioGroup
               label="Number of words in the article"
@@ -43,7 +42,6 @@ const ArticleSpecificationForm = ({ register, control, errors }) => {
             />
           )}
           {watchNumberOfWords === 'limited' && <MinMaxInput register={register} errors={errors} control={control} />}
-
           {options.dofollowLinks && (
             <RadioGroup
               label="I allow DOFOLLOW links in the article"
@@ -53,7 +51,6 @@ const ArticleSpecificationForm = ({ register, control, errors }) => {
               className="mt-4"
             />
           )}
-
           {options.linkTypes && (
             <RadioGroup
               label="Type of links allowed:"
@@ -64,9 +61,8 @@ const ArticleSpecificationForm = ({ register, control, errors }) => {
             />
           )}
         </Col>
-
         {/* Right Column */}
-        <Col md={6}>
+        <Col md={6} className="article-spec-col">
           {options.taggingPolicy && (
             <RadioGroup
               label="Tagging articles policy:"
@@ -75,7 +71,6 @@ const ArticleSpecificationForm = ({ register, control, errors }) => {
               register={register}
             />
           )}
-
           {options.advertiserLinks && (
             <RadioGroup
               label="A number of links to the advertiser in the article:"
@@ -86,7 +81,6 @@ const ArticleSpecificationForm = ({ register, control, errors }) => {
             />
           )}
           {watchAdvertiserLinks === 'max_number' && <MinMaxInput register={register} errors={errors} control={control} />}
-
           {options.otherLinks && (
             <RadioGroup
               label="Other links in the article:"
@@ -96,7 +90,6 @@ const ArticleSpecificationForm = ({ register, control, errors }) => {
               className="mt-4"
             />
           )}
-
           <TextArea
             label="Other content rules/specifications:"
             name="otherRules"
@@ -106,7 +99,7 @@ const ArticleSpecificationForm = ({ register, control, errors }) => {
           />
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 

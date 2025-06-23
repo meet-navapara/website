@@ -10,6 +10,7 @@ import ArticleSpecificationForm from '../features/article-specification/ArticleS
 import PreconditionsBar from '../features/website-details/PreconditionsBar.jsx';
 import { addWebsite, updateWebsite } from '../store/slices/websitesSlice';
 import { getLanguages } from '../services/apiService';
+import frame from '../assets/frame.png';
 import './AddWebsitePage.css';
 
 const AddWebsitePage = () => {
@@ -71,6 +72,27 @@ const AddWebsitePage = () => {
 
   return (
     <Container className="add-website-page">
+      <h1 className="add-website-main-title">Add a website</h1>
+      <div className="add-website-hero">
+        <div className="add-website-hero-left">
+          <div className="add-website-hero-learn">
+            <h2>Learn how to get best out of linksera</h2>
+            <ul>
+              <li>How to add your website to the marketplace</li>
+              <li>Setting pricing and niche/category filters</li>
+              <li>Uploading sample articles or guidelines</li>
+              <li>Editing or updating your website listing anytime</li>
+              <li>Tips to make your listing stand out to buyers</li>
+            </ul>
+          </div>
+        </div>
+        <div className="add-website-hero-right">
+          <div className="add-website-hero-video">
+            <img src={frame} alt="Linksera video" className="add-website-hero-video-img" />
+           
+          </div>
+        </div>
+      </div>
       <div className="form-card-container">
         <PreconditionsBar conditionsAccepted={conditionsAccepted} setConditionsAccepted={setConditionsAccepted} />
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -78,7 +100,7 @@ const AddWebsitePage = () => {
           <CreateOfferForm register={register} control={control} errors={errors} />
           <ArticleSpecificationForm register={register} control={control} errors={errors} />
           <div className="text-center my-4">
-            <Button type="submit" variant="primary" size="lg">
+            <Button type="submit" variant="primary" size="lg" className="offer-submit-btn">
               {isEditMode ? 'Update Website' : 'Submit Website'}
             </Button>
           </div>

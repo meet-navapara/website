@@ -1,0 +1,31 @@
+.article-spec-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  text-align: left;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.article-spec-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+.article-spec-col {
+  padding-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .article-spec-card {
+    padding: 1.5rem 0.5rem;
+  }
+  .article-spec-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+} 

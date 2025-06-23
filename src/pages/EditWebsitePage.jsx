@@ -57,7 +57,7 @@ const EditWebsitePage = () => {
           <CreateOfferForm register={register} control={control} errors={errors} />
           <ArticleSpecificationForm register={register} control={control} errors={errors} />
           <div className="text-center my-4">
-            <Button type="submit" variant="primary" size="lg">
+            <Button type="submit" variant="primary" size="lg" className="offer-submit-btn">
               Update Website
             </Button>
           </div>

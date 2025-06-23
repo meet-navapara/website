@@ -31,4 +31,10 @@
 .invalid-feedback-custom {
   color: #dc3545; /* Red text for error message */
   display: block; /* Make sure it's visible */
+}
+
+.form-control-custom::placeholder {
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  opacity: 1;
 } 
