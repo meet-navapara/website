@@ -1,0 +1,9 @@
+.min-max-wrapper {
+  margin-left: 1.5rem; /* Indent under the radio button */
+  margin-top: -0.5rem; /* Reduce space from radio button */
+}
+
+.min-max-separator {
+  font-size: 1.5rem;
+  color: #6c757d;
+} 

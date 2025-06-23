@@ -1,0 +1,51 @@
+.add-website-page {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #fff;
+}
+
+.add-website-page .form-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e9ecef;
+}
+
+.add-website-page h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #343a40;
+}
+
+.add-website-page .form-label {
+  font-weight: 500;
+  color: #495057;
+}
+
+.add-website-page .form-control,
+.add-website-page .react-select__control {
+  border-radius: 0.25rem;
+}
+
+.add-website-page .form-check-label {
+  padding-left: 0.5rem;
+}
+
+.add-website-page .offer-nav-tabs .nav-link {
+  color: #6c757d;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid transparent;
+}
+
+.add-website-page .offer-nav-tabs .nav-link.active {
+  color: #495057;
+  border-bottom-color: #6200ea;
+}
+
+fieldset:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+} 

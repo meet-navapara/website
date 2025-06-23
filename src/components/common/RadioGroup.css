@@ -1,0 +1,87 @@
+/* src/components/common/RadioGroup.css */
+
+.radiogroup-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.radiogroup-legend {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.radiogroup-options-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.radio-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem; /* Space between options */
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Hide the default radio button */
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* The custom radio button circle */
+.radio-custom {
+  position: relative;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 50%; /* Makes it a circle */
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+/* --- States --- */
+
+/* THE GLOW EFFECT on Hover/Focus */
+.radio-input:hover ~ .radio-label .radio-custom,
+.radio-input:focus ~ .radio-label .radio-custom {
+  border-color: #613ded;
+  box-shadow: 0 0 0 0.5rem rgba(97, 61, 237, 0.15);
+}
+
+/* Checked State */
+.radio-input:checked ~ .radio-label .radio-custom {
+  background-color: #613ded;
+  border-color: #613ded;
+}
+
+/* The inner dot for the checked state */
+.radio-custom::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Show the inner dot when checked */
+.radio-input:checked ~ .radio-label .radio-custom::after {
+  display: block;
+} 

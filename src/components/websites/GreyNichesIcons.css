@@ -1,0 +1,9 @@
+.grey-niches-icons-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.grey-niches-icons-wrapper svg {
+  color: #613ded;
+  margin-right: 0.75rem;
+} 

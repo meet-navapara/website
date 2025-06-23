@@ -1,0 +1,19 @@
+.grey-niche-row {
+  margin-top: 1.5rem;
+}
+
+.grey-niche-category-col {
+  padding-right: 2rem;
+}
+
+.grey-niche-category-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+
+.grey-niche-pricer-disabled {
+  opacity: 0.5;
+  pointer-events: none; /* Disables mouse interaction */
+} 

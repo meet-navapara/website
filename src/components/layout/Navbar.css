@@ -1,0 +1,50 @@
+.top-bar {
+  height: 4px;
+  background-color: #007bff; /* A standard blue, can be changed */
+}
+
+.app-navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0.5rem 2rem;
+}
+
+.kraken-logo {
+  height: 32px;
+  width: auto;
+  margin-right: 0.5rem;
+  fill: #613ded;
+}
+
+.kraken-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.app-navbar .nav-link {
+  color: #6c757d;
+  font-weight: 500;
+  margin: 0 0.5rem;
+  padding: 0.5rem 0.5rem;
+  border-bottom: 3px solid transparent;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.app-navbar .nav-link:hover {
+  color: #613ded;
+}
+
+.app-navbar .nav-link.active {
+  color: #613ded !important;
+  border-bottom: 3px solid #613ded;
+  background-color: #f2effd;
+}
+
+.app-navbar .nav-link svg {
+  color: #6c757d;
+}
+
+.app-navbar .nav-link:hover svg {
+  color: #613ded;
+} 

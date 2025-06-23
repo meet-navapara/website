@@ -1,0 +1,30 @@
+.currency-input-group .form-control,
+.currency-input-group .input-group-text {
+  border-color: #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.currency-input-group:hover .form-control,
+.currency-input-group:hover .input-group-text {
+  border-color: #613ded;
+}
+
+.currency-input-control:focus,
+.currency-input-control:focus + .input-group-text {
+  border-color: #613ded !important;
+  box-shadow: 0 0 0 0.2rem rgba(97, 61, 237, 0.25) !important;
+  z-index: 3;
+}
+
+.currency-symbol {
+  background-color: #fff;
+  border-right: none;
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+}
+
+.currency-input-control {
+  border-left: none;
+  border-top-right-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+} 

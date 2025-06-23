@@ -1,0 +1,119 @@
+/* --- Base Control Style --- */
+.custom-control {
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+  min-height: 1.5rem;
+}
+
+.custom-control-label {
+  position: relative;
+  margin-bottom: 0;
+  vertical-align: top;
+  line-height: 1.5;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* The actual box */
+.custom-control-label::before {
+  position: absolute;
+  top: 0.1rem;
+  left: -2rem;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  pointer-events: none;
+  content: "";
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.35rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Checkmark (hidden by default) */
+.custom-control-label::after {
+  position: absolute;
+  top: 0.1rem;
+  left: -2rem;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+/* --- States --- */
+
+/* THE GLOW EFFECT on Hover/Focus - To match the text field */
+.custom-control-input:hover ~ .custom-control-label::before,
+.custom-control-input:focus ~ .custom-control-label::before {
+  /* This effect has both a border and a shadow, like the text field */
+  border-color: #613ded;
+  box-shadow: 0 0 0 0.2rem rgba(97, 61, 237, 0.25);
+}
+
+/* Checked State */
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #613ded;
+  border-color: #613ded;
+  box-shadow: none; /* Remove glow when checked and not hovered */
+}
+
+/* Hover/Focus on a CHECKED control */
+.custom-control-input:checked:hover ~ .custom-control-label::before,
+.custom-control-input:checked:focus ~ .custom-control-label::before {
+  background-color: #613ded;
+  border-color: #613ded;
+  box-shadow: 0 0 0 0.2rem rgba(97, 61, 237, 0.25); /* Re-apply glow on hover */
+}
+
+/* Active State (when clicking) */
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  background-color: #d3c6f0;
+  border-color: #d3c6f0;
+}
+
+/* Disabled State */
+.custom-control-input:disabled ~ .custom-control-label {
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.custom-control-input:disabled ~ .custom-control-label::before {
+  background-color: #e9ecef;
+}
+
+/* Checkmark for checked state */
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e") !important;
+}
+
+/* Dot for checked radio */
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e") !important;
+}
+
+/* --- OVERRIDES FOR BLUE CHECKBOX --- */
+
+/* Blue Hover/Focus for Checkbox - To match text field style */
+.custom-checkbox .custom-control-input:hover ~ .custom-control-label::before,
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Blue Checked State for Checkbox */
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #007bff; /* Bootstrap primary blue */
+  border-color: #007bff;
+}
+
+/* Blue Hover/Focus on Checked Checkbox */
+.custom-checkbox .custom-control-input:checked:hover ~ .custom-control-label::before,
+.custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
+  background-color: #007bff;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}

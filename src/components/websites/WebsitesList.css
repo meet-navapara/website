@@ -1,0 +1,30 @@
+.websites-list-container {
+  padding: 1.5rem 2rem;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.add-website-btn {
+  background-color: #613ded !important;
+  border-color: #613ded !important;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+}
+
+.add-website-btn:hover,
+.add-website-btn:focus {
+  background-color: #502ec4 !important;
+  border-color: #502ec4 !important;
+  box-shadow: 0 0 0 0.2rem rgba(97, 61, 237, 0.5) !important;
+} 

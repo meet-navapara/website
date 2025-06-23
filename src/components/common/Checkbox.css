@@ -1,0 +1,69 @@
+/* src/components/common/Checkbox.css */
+
+.checkbox-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Hide the default browser checkbox */
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* The custom checkbox box */
+.checkbox-custom {
+  position: relative;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.45rem; /* Rounded corners */
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+/* --- States --- */
+
+/* THE GLOW EFFECT on Hover/Focus */
+.checkbox-input:hover ~ .checkbox-label .checkbox-custom,
+.checkbox-input:focus ~ .checkbox-label .checkbox-custom {
+  border-color: #613ded;
+  box-shadow: 0 0 0 0.5rem rgba(97, 61, 237, 0.15);
+}
+
+/* Checked State */
+.checkbox-input:checked ~ .checkbox-label .checkbox-custom {
+  background-color: #613ded;
+  border-color: #613ded;
+}
+
+/* The checkmark */
+.checkbox-custom::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 0.45rem;
+  top: 0.2rem;
+  width: 0.4rem;
+  height: 0.8rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Show the checkmark when the checkbox is checked */
+.checkbox-input:checked ~ .checkbox-label .checkbox-custom::after {
+  display: block;
+} 

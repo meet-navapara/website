@@ -1,0 +1,86 @@
+.website-table {
+  background-color: transparent;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.website-table thead th {
+  background-color: transparent;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: #6c757d;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  text-align: left;
+}
+
+.website-table tbody td {
+  padding: 1rem 1.5rem;
+  vertical-align: middle;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.website-table tbody td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-left: 1px solid #f0f0f0;
+}
+
+.website-table tbody td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-right: 1px solid #f0f0f0;
+}
+
+.website-table tbody tr {
+  transition: background-color 0.15s ease-in-out;
+  border-radius: 8px;
+}
+
+.website-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.website-table tbody tr:hover {
+  background-color: #f8f7fe;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.country-flag {
+  width: 24px;
+  margin-right: 10px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.country-cell {
+  /* display: flex; and align-items: center; removed */
+}
+
+.language-cell {
+  text-align: left;
+}
+
+.clickable-row {
+  cursor: pointer;
+}
+
+.website-table .website-cell,
+.website-table .country-cell,
+.website-table .language-cell,
+.website-table .category-cell {
+  white-space: nowrap;
+}
+
+.website-table .other-categories-cell {
+  white-space: normal;
+  word-break: break-word;
+  max-width: 250px;
+} 

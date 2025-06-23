@@ -1,0 +1,27 @@
+/* src/components/common/TextArea.css */
+
+.form-control-custom-textarea {
+  border-radius: 8px !important;
+  border: 1px solid #ced4da !important;
+  padding: 0.75rem 1rem !important;
+  box-shadow: none !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+  resize: vertical;
+}
+
+.form-control-custom-textarea:hover {
+  border-color: #613ded !important;
+}
+
+.form-control-custom-textarea:focus {
+  border-color: #613ded !important;
+  box-shadow: 0 0 0 0.2rem rgba(97, 61, 237, 0.25) !important;
+}
+
+.form-control-custom-textarea.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.form-control-custom-textarea.is-invalid:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25) !important;
+} 
