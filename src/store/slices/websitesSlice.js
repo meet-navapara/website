@@ -33,6 +33,7 @@ const fullWebsiteInitialState = {
 const initialState = {
   list: [
     { id: 1, ...fullWebsiteInitialState, flag: 'https://flagcdn.com/us.svg' },
+    
   ],
 };
 

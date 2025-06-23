@@ -5,13 +5,18 @@ import { Table, Container } from 'react-bootstrap';
 import GreyNichesIcons from './GreyNichesIcons';
 import './WebsiteTable.css';
 
-const WebsiteTable = () => {
+const WebsiteTable = ({ currentPage, recordsPerPage }) => {
   const websites = useSelector((state) => state.websites.list);
   const navigate = useNavigate();
 
   const handleRowClick = (id) => {
     navigate(`/edit-website/${id}`);
   };
+
+  // Pagination logic
+  const startIndex = (currentPage - 1) * recordsPerPage;
+  const endIndex = startIndex + recordsPerPage;
+  const paginatedWebsites = websites.slice(startIndex, endIndex);
 
   return (
     <Container fluid>
@@ -27,7 +32,7 @@ const WebsiteTable = () => {
           </tr>
         </thead>
         <tbody>
-          {websites.map((row) => (
+          {paginatedWebsites.map((row) => (
             <tr key={row.id} onClick={() => handleRowClick(row.id)} className="clickable-row">
               <td className="website-cell">{row.websiteUrl}</td>
               <td className="country-cell">
