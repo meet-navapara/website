@@ -20,7 +20,6 @@ const AppNavbar = () => {
             <Nav className="mx-auto">
               <Nav.Link as={NavLink} to="/marketplace">Marketplace</Nav.Link>
               <Nav.Link as={NavLink} to="/" end>My websites</Nav.Link>
-              <Nav.Link as={NavLink} to="/form">Conditional Form</Nav.Link>
               <Nav.Link as={NavLink} to="/my-orders">My Orders</Nav.Link>
               <Nav.Link as={NavLink} to="/my-projects">My projects</Nav.Link>
               <Nav.Link as={NavLink} to="/received-orders">Received orders</Nav.Link>
